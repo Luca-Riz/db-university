@@ -9,6 +9,9 @@ FROM `courses`
 WHERE `cfu` > 10;
 
 3.
+SELECT * 
+FROM `students`
+WHERE DATEDIFF("2021-08-27", `date_of_birth`)/ 365.25 > 30;
 
 4.
 SELECT * 
