@@ -49,4 +49,5 @@ SELECT COUNT(*) AS `n_volte_esame`, `exams`.`course_id` AS `exam_id`, `students`
 FROM `students`
 JOIN `exam_student` ON `exam_student`.`student_id` = `students`.`id`
 JOIN `exams` ON `exams`.`id` = `exam_student`.`exam_id`
-GROUP BY `exams`.`course_id`, `students`.`id`
+GROUP BY `exams`.`course_id`, `students`.`id`  
+ORDER BY `student_id` ASC;
