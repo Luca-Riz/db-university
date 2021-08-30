@@ -45,7 +45,7 @@ JOIN `courses` ON `courses`.`id` = `course_teacher`.`course_id`
 WHERE `teachers`.`id` = '44';
 
 4.BONUS: Selezionare per ogni studente quanti tentativi d’esame ha sostenuto per superare ciascuno dei suoi esami
-SELECT COUNT(*) AS `n_volte_esame`, `exams`.`course_id`, `students`.`id`
+SELECT COUNT(*) AS `n_volte_esame`, `exams`.`course_id` AS `exam_id`, `students`.`id` AS `student_id`, `students`.`name` AS `student_name`, `students`.`surname` AS `student_surname`
 FROM `students`
 JOIN `exam_student` ON `exam_student`.`student_id` = `students`.`id`
 JOIN `exams` ON `exams`.`id` = `exam_student`.`exam_id`
